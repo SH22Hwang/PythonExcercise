@@ -6,10 +6,10 @@ def main():
     accNum = 0
     while True:
         showMenu()
-        choice = input("선택: ")
+        choice = int(input("선택: "))
 
         if choice == 1:
-            accList.append(openAcc(accList, accNum))
+            accList.append(openAcc())
             accNum += 1
         elif choice == 2:
             depositAcc(accList, accNum)

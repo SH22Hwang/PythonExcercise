@@ -21,19 +21,17 @@ class Account:
 
 
 def showMenu():
-    print("-----Menu-----\n1. 계좌개설\n2. 입금\n3. 출금\n4. 전체 고객 조회\n5. 종료\n\n")
+    print("-----Menu-----\n1. 계좌개설\n2. 입금\n3. 출금\n4. 전체 고객 조회\n")
 
 
-def openAcc(accList, accNum):
-    print("[계좌 개설]\n")
+def openAcc():
+    print("[계좌 개설]")
 
     myId = input("id: ")
     name = input("이름: ")
     money = input("입금액: ")
 
-    accList[accNum] = Account(myId, name, money)
-
-    return accList[accNum]
+    return Account(myId, name, money)
 
 
 def depositAcc(accList, accNum):
@@ -68,8 +66,8 @@ def showAllAcc(accList, accNum):
     print("전체 고객 조회\n")
     for i in range(accNum):
         print("사용자 id: ", accList[i].getId())
-        print("\n사용자 이름: ", accList[i].getName())
-        print("\n잔액: ", accList[i].getBalance(), "\n\n")
+        print("사용자 이름: ", accList[i].getName())
+        print("잔액: ", accList[i].getBalance(), "\n")
 
 
 if __name__ == "__main__":
