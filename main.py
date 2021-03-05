@@ -9,8 +9,28 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
+def setTomatoes():
+    m = input("m: ")
+    n = input("n: ")
+
+    boxRows = []
+    boxCols = []
+
+    for x in range(m):
+        for y in range(n):
+            temp = input()
+            boxRows.append(temp)
+        boxCols.append(boxRows)
+
+
+def ripenTomatoes(null=None):
+    return null
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+    setTomatoes()
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
